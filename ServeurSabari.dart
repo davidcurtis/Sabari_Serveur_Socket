@@ -14,6 +14,7 @@ class SabariServeur {
     
     //------------------------------------------- Changez l'adresse IP du serveur en mettant votre addresse à la place --------------
     serveurALecoute = new ServerSocket("", 8080, 0);
+    //-------------------------------------------------------------------------------------------------------------------------------
     
     serveurALecoute.onConnection = this.nouvelleConnection;
   }
@@ -52,7 +53,7 @@ class SabariServeur {
       {
         listSocket.forEach((Socket d)
             {
-                String outpoutListe = "msgAll,".concat(listeRecue.last.toString().concat('\n')) ;
+                String outpoutListe = "msgAll,".concat(listeRecue[1].toString().concat('\n')) ;
                  d.writeList(outpoutListe.charCodes, 0, outpoutListe.length);
                  print(d.toString());
                      
