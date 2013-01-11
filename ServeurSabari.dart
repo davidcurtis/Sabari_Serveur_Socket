@@ -53,7 +53,7 @@ class SabariServeur {
       {
         listSocket.forEach((Socket d)
             {
-                String outpoutListe = "msgAll,".concat(listeRecue[1].toString().concat(listeRecue[2].toString().concat('\n'))) ;
+                String outpoutListe = "msgAll,".concat(listeRecue[1].toString().concat(",").concat(listeRecue[2].toString().concat('\n'))) ;
                  d.writeList(outpoutListe.charCodes, 0, outpoutListe.length);
                  print(d.toString());
                      
